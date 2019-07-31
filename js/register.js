@@ -1,12 +1,43 @@
 
 
+$(document).on("pagecreate", "#page", function () {
+
+});
+/**
+ * 首页头部调整
+ * @param {*} params 电话输入框对象 
+ */
+function homeHeaderAdjust(params) {
+    params.focus(function (e) {
+        $('.index-header').css("display", "none");
+    }).blur(function (param) {
+        $('.index-header').css("display", "block");
+    })
+}
+
 // 企业注册事件
 $(document).on("pagecreate", "#enterprise", function () {
     let page = $("#enterprise");
+    homeHeaderAdjust(page.find("input.tel"));
 
     // 获取验证码
     page.find(".get-captcha").on("tap", function (e) {
-        // 第一个参数 电话输入框的jq对象 第二个参数 获取验证码的按钮jq对象
+        getCaptcha(page.find("input.tel"), $(this));
+
+    });
+    // 确认注册 
+    page.find(".confirm-register").on("tap", function (e) {
+        // 验证码转小写传入
+        confirmRegister(page.find("input.captcha").val().toLowerCase());
+    });
+
+});
+// 个人注册事件
+$(document).on("pagecreate", "#person", function () {
+    let page = $("#person");
+    homeHeaderAdjust(page.find("input.tel"));
+    // 获取验证码
+    page.find(".get-captcha").on("tap", function (e) {
         getCaptcha(page.find("input.tel"), $(this));
 
     });
@@ -71,5 +102,4 @@ function confirmRegister(captcha) {
     } else {
         location.href = "./demo.html";
     }
-
 }

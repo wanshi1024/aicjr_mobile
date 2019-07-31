@@ -1,17 +1,14 @@
-#page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#page div[data-role="content"] {
+  margin-top: 6rem;
 }
 #page div[data-role="content"] a {
   margin: 10% 0;
 }
-#enterprise div[data-role="content"] {
+#enterprise div[data-role="content"],
+#person div[data-role="content"] {
   margin-top: 5rem;
 }
-#enterprise div[data-role="content"] .form {
-  align-self: center;
-}
-#enterprise div[data-role="content"] label {
+#enterprise div[data-role="content"] label,
+#person div[data-role="content"] label {
   margin: 5% 0;
 }
