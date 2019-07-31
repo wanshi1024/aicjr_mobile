@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="./lib/jQuery.mobile/jquery.mobile-1.4.5.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jQuery.mobile/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/register.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="page" >
+        <div data-role="header" data-position="fixed">
+            <h1>请选择注册身份</h1>
+        </div>
+        <div data-role="content" >
+            <a href="#enterprise" class="ui-btn ui-btn-icon-right ui-icon-home" data-transition="slide">企业注册</a>
+            <a href="#person" class="ui-btn ui-btn-icon-right ui-icon-user" data-transition="slide">个人注册</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>页面底部内容</h1>
+        </div>
+    </div>
+    <!-- 企业注册 -->
+    <div data-role="page" id="enterprise" >
+        <div data-role="header" data-position="fixed">
+            <a href="#page" data-transition="slide" data-direction="reverse">返回</a>
+            <h1>企业注册</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+            <div class="form">
+                <label>
+                    <input type="tel" class="tel"  placeholder="请输入手机号"  >
+                </label>
+                <label style="display: flex;">
+                    <input type="text" class="captcha" placeholder="请输入验证码" maxlength="4"  data-clear-btn="true">
+                    <button  class="get-captcha ui-mini" style="width: 42%;padding: 0;">获取验证码</button>
+                </label>
+                <label>
+                    <a class="ui-btn ui-btn-b confirm-register" >确认注册</a>
+                </label>
+            </div>
+        </div>
+        ​
+        <div data-role="footer" data-position="fixed">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+
+    <!-- 个人注册注册 -->
+    <div data-role="page" id="person">
+        <div data-role="header" data-position="fixed">
+            <a href="#page" data-transition="slide" data-direction="reverse">返回</a>
+            <h1>个人注册</h1>
+        </div>
+        ​
+        <div data-role="main" class="ui-content">
+            个人
+        </div>
+        ​
+        <div data-role="footer" data-position="fixed">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+
+</html>

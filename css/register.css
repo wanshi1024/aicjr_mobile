@@ -1,0 +1,17 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#page div[data-role="content"] a {
+  margin: 10% 0;
+}
+#enterprise div[data-role="content"] {
+  margin-top: 5rem;
+}
+#enterprise div[data-role="content"] .form {
+  align-self: center;
+}
+#enterprise div[data-role="content"] label {
+  margin: 5% 0;
+}
